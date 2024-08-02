@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .btn1 {
+        margin: 30px 30px;
+        padding: 20px 20px;
+      }
+      .btn_main {
+        background-color: aqua;
+        height: 100px;
+        width: 100%;
+      }
+      .btn2 {
+        margin: 25px 90px;
+        padding: 20px;
+      }
+      .fa-solid:hover{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="show()" class="btn1">click me</button>
+
+    <div class="btn_main">
+      <button class="btn2">btn1</button>
+      <button class="btn2">btn2</button>
+      <button class="btn2">btn3</button>
+      <i onclick="hide()" class="fa-solid fa-xmark fa-2xl"></i>
+    </div>
+
+    <script>
+      let btn_main = document.querySelector(".btn_main");
+      btn_main.style.display = "none";
+      function hide() {
+        btn_main.style.display = "none";
+      }
+      function show() {
+        btn_main.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

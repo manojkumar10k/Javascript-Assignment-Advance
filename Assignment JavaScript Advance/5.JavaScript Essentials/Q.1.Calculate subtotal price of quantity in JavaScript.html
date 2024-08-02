@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Price of Quantity </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            margin-left: 400px;
+            margin-top: 120px;
+            background-color: aqua;
+        }
+        table{
+            background-color: cadetblue;
+        }
+        button{
+            padding: 10px 10px;
+            background-color: rgb(240, 46, 12);
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+        }
+        button:hover{
+            padding: 12px 12px;
+            background-color: rgb(255, 38, 0);
+        }
+        #price1 {
+            border: none;
+            text-align: center;
+        }
+        #price2 {
+            border: none;
+            text-align: center;
+        }
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        .white2{
+            filter: drop-shadow(1px 1px 12px red);
+        }
+    
+    </style>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <th><h2>Product info</h2></th>
+            <th><h2>Qntity</h2></th>
+            <th><h2>Price (per unit)</h2></th>
+            <th><h2>Price (subtotal)</h2></th>
+            <th><h2>Remove</h2></th>
+        </tr>
+        <tr><td><div><img src="image/pngwing.com.png" alt="" class="white2"></div></td>
+            </div>
+            <td><input type="number" id="quntity1" onchange="subtotal()" min="0"></td>
+            <td><input type="number" name="" id="price1" value="500" readonly></td>
+            <td id="sub1"></td>
+            <td><button onclick="Remove1()">Remove</button></td>
+        </tr>
+        <tr>
+            <td><div><img src="image/white2.png" alt="" class="white2"></div> </td>
+            <td><input type="number" id="quntity2" onchange="subtotal2()"></td>
+            <td><input type="number" name="" id="price2" value="500"></td>
+            <td id="sub2"></td>
+            <td><button onclick="Remove2()">Remove</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="qtotal"></td>
+            <td>1000</td>
+            <td id="total"></td>
+            <td><button onclick="submit()">submit</button></td>
+        </tr>
+
+    </table>
+
+    <script>
+        p1 = document.getElementById('price1');
+        q1 = document.getElementById('quntity1');
+        btn = document.querySelectorAll('button')
+        p2 = document.getElementById('price2');
+        q2 = document.getElementById('quntity2');
+        sub1 = document.getElementById('sub1');
+        sub2 = document.getElementById('sub2');
+
+        function subtotal() {
+            document.getElementById('sub1').innerHTML = p1.value * q1.value
+            sub1.style.visibility = "visible";
+        }
+
+        function subtotal2() {
+            document.getElementById('sub2').innerHTML = p2.value * q2.value
+            sub2.style.visibility = "visible";
+        }
+
+        function Remove1() {
+            q1.value = " ";
+            sub1.style.visibility = "hidden";
+        }
+
+        function Remove2() {
+            q2.value = " ";
+            sub2.style.visibility = "hidden";
+
+        }
+
+        function submit() {
+            document.getElementById('total').innerHTML = p2.value * q2.value + p1.value * q1.value;
+            var tot = document.getElementById('qtotal').innerHTML = parseInt(q1.value) + parseInt(q2.value);
+            
+        }
+    </script>
+</body>
+
+</html>

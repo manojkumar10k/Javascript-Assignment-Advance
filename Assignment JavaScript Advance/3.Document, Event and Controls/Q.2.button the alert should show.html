@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">click Me 1</button>
+    <button class="btn">click Me 2</button>
+    <button class="btn">click Me 3</button>
+
+    <script>
+
+      let btn = document.querySelectorAll(".btn");
+      
+      btn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          alert("click Me Button");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Header</title>
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+          }
+
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #baeb0a;
+
+            color: #000000;
+          }
+          img {
+            font-size: 1.5em;
+          }
+
+          .nav-menu {
+            display: flex;
+          }
+
+          .nav-menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+          }
+
+          .nav-menu ul li {
+            margin: 0 15px;
+          }
+
+          .nav-menu ul li a {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            text-decoration: none;
+            position: relative;
+            margin-right: 20px;
+          }
+
+          .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+          }
+
+          .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: all 0.3s;
+          }
+
+          a:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            content: "";
+            width: 100%;
+            background: rgb(255, 255, 255);
+
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.6s linear;
+          }
+          a:hover:before {
+            transform: scale(1);
+            transform-origin: left;
+          }
+
+          @media (max-width: 768px) {
+            .nav-menu {
+              display: none;
+              flex-direction: column;
+              width: 100%;
+              position: absolute;
+              top: 85px;
+              left: 0;
+              background-color: #baeb0a;
+            }
+
+            .nav-menu ul {
+              flex-direction: column;
+            }
+
+            .nav-menu ul li {
+              margin: 15px 0;
+              text-align: center;
+            }
+
+            .menu-toggle {
+              display: flex;
+            }
+
+            .nav-menu.active {
+              display: flex;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <img src="./image/61defd565b95860877484fe4_Logo_Bazil.svg" alt="" />
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Design</a></li>
+              <li><a href="">Photos</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+            menuToggle.addEventListener("click", () => {
+              navMenu.classList.toggle("active");
+            });
+          });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

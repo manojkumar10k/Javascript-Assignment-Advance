@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------- input Events------->
+
+    <!-- ---------------------------onblur--------------------------------------------- -->
+
+    <!-- <h2>The onblur Attribute</h2>
+
+    Enter your name: <input type="text" id="fname" onblur="myFunction()" />
+
+    <p>When you leave the input field.</p>
+
+    <script>
+      function myFunction() {
+        const x = document.getElementById("fname");
+        x.style.border = "2px solid red";
+      }
+    </script> -->
+
+    <!-- ----------------------------------onchange-------------------------------------         -->
+
+    <!-- <h2>The onchange Attribute</h2>
+
+    <form>
+      Choose which browser you prefer:
+      <select id="browsers" onchange="preferedBrowser()">
+        <option value="Chrome">Chrome</option>
+        <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Firefox">Firefox</option>
+      </select>
+    </form>
+
+    <script>
+      function preferedBrowser() {
+        prefer = document.forms[0].browsers.value;
+        alert("You prefer browsing internet with " + prefer);
+      }
+    </script> -->
+
+    <!-- ----------------------------------onfocus------------------------------------- -->
+
+    <!-- <h2>The onfocus Attribute</h2>
+
+    Enter your name: <input type="text" onfocus="myFunction(this)" />
+
+    <p>
+      When the input field gets focus, a function is triggered which changes the
+      background-color.
+    </p>
+
+    <script>
+        function myFunction(x) {
+          x.style.background = "yellow";
+        }
+        </script> -->
+
+    <!-- ---------------------------------------onselect----------------------------------------------       -->
+
+    <!-- <h2>The onselect Attribute</h2>
+
+    Some text:
+    <input type="text" value="Hello world!" onselect="myFunction()" />
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You selected some text";
+      }
+    </script> -->
+
+    <!-- -----------------------------onsubmit-------------------------------------------------------------   -->
+
+    <!-- <h2>The onsubmit Attribute</h2>
+
+    <form onsubmit="confirmInput()" action="https://www.tops-int.com/">
+      Enter your name: <input id="fname" type="text" size="20" />
+      <input type="submit" />
+    </form> -->
+
+    <!-- --------------------------------------onreset------------------------------------------------------------ -->
+
+    <!-- <h2>The onreset Attribute</h2>
+
+    <form onreset="message()">
+      Enter your name: <input type="text" size="20" />
+      <input type="reset" />
+    </form>
+
+    <script>
+        function message() {
+          alert("onreset");
+        }
+        </script> -->
+
+    <!-- -------------------------------------------onkeydown---------------------------------------------------------------- -->
+
+    <!-- <h2>The onkeydown Attribute</h2>
+
+    <p>
+      A function is triggered when the user is pressing a key in the input
+      field.
+    </p>
+
+    <input type="text" onkeydown="myFunction()" />
+
+    <script>
+        function myFunction() {
+          alert("You pressed a key inside the input field");
+        }
+        </script> -->
+
+    <!-- -------------------------------------------onkeypress-------------------------------------------------------------  -->
+
+    <!-- <h2>The onkeypress Attribute</h2>
+    <p>
+      A function is triggered when the user is pressing a key in the input
+      field.
+    </p>
+
+    <input type="text" onkeypress="myFunction()" />
+
+    <script>
+      function myFunction() {
+        alert("You pressed a key inside the input field");
+      }
+    </script> -->
+
+    <!-- ----------------------------------------------onkeyup-----------------------------------------------------------  -->
+
+    <!-- <h2>The onkeyup Attribute</h2>
+
+<p>A function is triggered when the user releases a key in the input field.</p>
+<p>The function transforms the input character to upper case.</p>
+Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+
+<script>
+function myFunction() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script> -->
+
+    <!-- --------------------------------------------------------------------------------------------------  -->
+    <!-- ------------------------------------------------Mouse Events ---------------------------------------->
+    <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- --------------------------------------------------onclick---------------------------------------------- -->
+
+    <!-- <h2>The onclick Event</h2>
+    <p>Click to trigger a function that will output "Hello World":</p>
+    <button onclick="myFunction()">Click me</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+      }
+    </script> -->
+
+    <!-- -------------------------------------------------ondblclick-------------------------------------------------------   -->
+    <!-- <h2>The ondblclick Event</h2>
+
+<p ondblclick="myFunction()">Double-click this paragraph to trigger a function.</p>
+
+<p id="demo"></p>
+
+<script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML += "Hello World ";
+  }
+  </script> -->
+
+    <!-- ------------------------------------------------onmousedown--------------------------------------------------------  -->
+
+    <!-- <h2>The onmousedown Event</h2>
+
+<p>Clock the text below!</p>
+<p id="myP" onmousedown="mouseDown()">
+The mouseDown() function sets the color of this text to red.
+</p>
+
+<script>
+function mouseDown() {
+  document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("myP").style.color = "blue";
+} -->
+    <!-- </script> -->
+
+    <!-- ---------------------------------------onmouseenter--------------------------------------------------------  -->
+
+    <!-- <h2>The onmouseenter Event</h2>
+<p>mouseenter: Similar to mouseover, but does not bubble and is only triggered when the mouse enters the element.</p>
+    <div id="myDiv" style="width:100px; height:100px; background-color:lightcyan;">Mouse enter me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mouseenter', function() {
+    alert('Mouse entered the div!');
+  });
+</script> -->
+
+    <!-- ---------------------------------------------------mouseleave------------------------------------------------------------- -->
+    <!-- <h2>The mouseleave Event</h2>
+    <p>mouseleave: Similar to mouseout, but does not bubble and is only triggered when the mouse leaves the element.</p>
+
+    <div id="myDiv" style="width:100px; height:100px; background-color:lightseagreen;">Mouse leave me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mouseleave', function() {
+    alert('Mouse left the div!');
+  });
+</script> -->
+
+    <!-- ----------------------------------------------------------Right-click------------------------------------------------------------ -->
+
+    <!-- <div id="myDiv" style="width:100px; height:100px; background-color:lightgoldenrodyellow;">Right-click me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert('Right-click detected!');
+  });
+</script> -->
+
+    <!-- -------------------------------------------------------Mouse out------------------------------------------------------------  -->
+
+    <!-- <div id="myDiv" style="width:100px; height:100px; background-color:lightgray;">Mouse out of me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mouseout', function() {
+    alert('Mouse out of the div!');
+  });
+</script> -->
+
+    <!-- -------------------------------------------------Mouse over--------------------------------------------------------------  -->
+
+    <!-- <div id="myDiv" style="width:100px; height:100px; background-color:lightpink;">Mouse over me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mouseover', function() {
+    alert('Mouse over the div!');
+  });
+</script> -->
+
+    <!-- ------------------------------------------------------Mousemove------------------------------------------------------  -->
+
+    <!-- <div id="myDiv" style="width:100px; height:100px; background-color:lightyellow;">Move mouse over me</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mousemove', function(event) {
+    console.log(`Mouse position: (${event.clientX}, ${event.clientY})`);
+  });
+</script> -->
+
+    <!-- -----------------------------------------------------mouseup----------------------------------------------  -->
+
+    <!-- <div id="myDiv" style="width:100px; height:100px; background-color:lightcoral;">Release mouse button here</div>
+<script>
+  document.getElementById('myDiv').addEventListener('mouseup', function() {
+    alert('Mouse button released!');
+  });
+</script> -->
+
+    <!-- --------------------------------------------------------------------------------------  -->
+    <!-- -------------------------------------Load Events--------------------------------------------  -->
+    <!-- ----------------------------------------------------------------------------------------  -->
+    <!-- --------------------------------------------------onload--------------------------------------------------------------------  -->
+
+    <!-- <body onload="myFunction()">
+  <h2>The onload Event</h2>
+
+  <script>
+    function myFunction() {
+      alert("Page is loaded");
+    }
+    </script> -->
+
+    <!-- ---------------------------------------------------------------------------------------------------------------  -->
+
+    <!-- <h2>The onerror Attribute</h2>
+
+    <img src="nonexistent-image.jpg" alt="Image" id="myImage" />
+    <script>
+      document.getElementById("myImage").onerror = function () {
+        this.src = "fallback-image.jpg";
+        console.error("Image failed to load. Displaying fallback image.");
+      };
+    </script> -->
+  </body>
+</html>

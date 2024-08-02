@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form-validate.css" />
+    <title>Form-Validate</title>
+    <link rel="stylesheet" href="form-validate.css">
+  </head>
+  <body>
+		<form action="">
+            <h1>Form Validation</h1>
+          
+             <label for="">Full Name:</label> 
+            <input type="text" name="" id="" class="full_inp" placeholder="Enter your Full Name">
+              <b class="full_error"></b>
+
+             <label for="">Email Address:</label> 
+            <input type="email" name="" id="" class="email_inp" placeholder="Enter your Email Address">
+            <b class="email_error"></b>
+
+            <label for="">Password:</label> 
+            <input type="password" name="" id="" class="password_inp" placeholder="Enter your password">
+            <b class="password_error"></b>
+
+            <label for="">Birth Date:</label> 
+            <input type="date" name="" id="" class="birth_inp">
+            <b class="birth_error"></b>
+
+            <label for="">Gender:</label>
+            <select name="" id="" class="gender_inp">
+              <option value="" hidden >Select your Gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+            <b class="gender_error"></b>
+
+            <button  onclick="return error()">Submit</button>
+        </form>
+
+	     <script>
+        let full_inp = document.querySelector(".full_inp")
+         let full_name = document.querySelector(".full_error")
+         
+         let email_inp = document.querySelector(".email_inp")
+         let email_error = document.querySelector(".email_error")
+
+         let password_inp = document.querySelector(".password_inp")
+         let password_error = document.querySelector(".password_error")
+
+         let birth_inp = document.querySelector(".birth_inp")
+         let birth_error = document.querySelector(".birth_error")
+         
+         let gender_inp = document.querySelector(".gender_inp")
+         let gender_error = document.querySelector(".gender_error") 
+
+        function error() {
+          if (full_inp.value == "") {
+            full_inp.style.border="2px solid red"
+            full_name.innerHTML= "Enter your Name"
+            full_name.style.color = "red"
+          } else  {
+            full_name.innerHTML = ""
+            full_inp.style.border=""
+          } 
+
+          if (email_inp.value == "") {
+            email_inp.style.border="2px solid red"
+            email_error.innerHTML= "Enter your Email"
+            email_error.style.color = "red"
+          } else  {
+            email_error.innerHTML = ""
+            email_inp.style.border=""
+          } 
+
+          if (password_inp.value == "") {
+            password_inp.style.border="2px solid red"
+            password_error.innerHTML= "Enter your password"
+            password_error.style.color = "red"
+          } else  {
+            password_error.innerHTML = ""
+            password_inp.style.border= ""
+          } 
+
+          if (birth_inp.value == "") {
+            birth_inp.style.border="2px solid red"
+            birth_error.innerHTML= "Enter your date of birth"
+            birth_error.style.color = "red"
+          } else  {
+            birth_error.innerHTML = ""
+            birth_inp.style.border= ""
+          } 
+
+          if (gender_inp.value == "") {
+            gender_inp.style.border="2px solid red"
+            gender_error.innerHTML= "Select your gender"
+            gender_error.style.color = "red"
+          } else  {
+            gender_error.innerHTML = ""
+            gender_inp.style.border= ""
+          } return false
+        }
+       </script>
+             
+  </body>
+</html>
